@@ -164,12 +164,11 @@ public class UrlControllerTest {
         }
     }
 
-    private UrlResponse stubCreate(CreateUrlRequest request){
+    private void stubCreate(CreateUrlRequest request){
         UrlResponse response = UrlResponseFactory.build();
         when(urlService.createUrl(request))
                 .thenReturn(response);
 
-        return response;
     }
 
 
@@ -181,11 +180,10 @@ public class UrlControllerTest {
         return response;
     }
 
-    private UrlResponse stubFindById(Long id){
+    private void stubFindById(Long id){
         UrlResponse response = UrlResponseFactory.build();
         when(urlService.findById(id))
                 .thenReturn(response);
 
-        return response;
     }
 }
